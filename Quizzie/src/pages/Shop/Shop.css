@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro&display=swap');
+
+/* =====================
+   ROOT
+===================== */
+body {
+  margin: 0;
+  font-family: 'Jaro', sans-serif;
+}
+
+.shop-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #d7fffb;
+}
+
+/* =====================
+   HEADER
+===================== */
+.shop-header {
+  height: 72px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shop-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.shop-back {
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #bff7f0, #7de3d8);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Arrow title */
+.shop-title {
+  padding: 10px 34px 10px 38px;
+  font-size: 22px;
+  color: #eafffb;
+  background: #2f7f78;
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 50%,
+    92% 100%,
+    0% 100%,
+    6% 50%
+  );
+  border-radius: 16px;
+  letter-spacing: 1px;
+}
+
+/* =====================
+   BODY SCROLL
+===================== */
+.shop-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 0;
+}
+
+.shop-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.shop-body::-webkit-scrollbar-thumb {
+  background: rgba(20, 184, 166, 0.6);
+  border-radius: 20px;
+}
+
+/* =====================
+   LIST
+===================== */
+.shop-list {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* =====================
+   SHOP ITEM
+===================== */
+.shop-item {
+  background: linear-gradient(180deg, #b6fdf4, #9af3e7);
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 24px rgba(6,95,70,0.25);
+}
+
+.shop-item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.shop-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: #7de3d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shop-title-text {
+  font-size: 18px;
+  color: #064e3b;
+}
+
+.shop-subtitle {
+  font-size: 14px;
+  color: #065f46;
+}
+
+/* =====================
+   PRICE PILL
+===================== */
+/* =====================
+   PRICE PILL (FIXED SIZE)
+===================== */
+.shop-price {
+  width: 96px;              /* 👈 fixed width (same for all) */
+  height: 40px;             /* 👈 fixed height */
+  
+  background: #2f7f78;      /* unchanged */
+  color: white;
+
+  border-radius: 14px;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  flex-shrink: 0;           /* prevents squishing */
+}

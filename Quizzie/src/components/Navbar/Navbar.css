@@ -1,0 +1,178 @@
+/* =========================
+   Quizzie Top Bar (Player + Currencies)
+========================= */
+.quizzie-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 14px 18px;
+  box-sizing: border-box;
+
+  background: transparent;
+}
+
+/* =========================
+   Player Section (Left)
+========================= */
+.quizzie-navbar__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quizzie-navbar__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quizzie-navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Player Avatar Ring */
+.quizzie-navbar__avatar-wrap {
+  width: 64px;
+  height: 64px;
+
+  padding: 0;                 /* 🔑 remove gap */
+  border-radius: 50%;
+
+  background: #EAFDFC;        /* optional subtle ring */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quizzie-navbar__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 🔑 fills circle */
+  border-radius: 50%;
+  display: block;
+}
+
+/* Player Name + Level Badge */
+.quizzie-navbar__badge {
+  background: #0F6A63;
+  color: #BFEDE0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 28px;          /* 🔑 more horizontal space */
+  min-width: 180px;            /* 🔑 ensures wider box */
+
+  border-radius: 10px 26px 26px 10px;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    90% 50%,
+    100% 100%,
+    0 100%
+  );
+}
+
+.quizzie-navbar__name {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.quizzie-navbar__level {
+  font-size: 14px;
+  opacity: 0.9;
+  letter-spacing: 0.6px;
+}
+
+/* =========================
+   Game Currencies (Right)
+========================= */
+.quizzie-navbar__tokens {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+/* =========================
+   Currency Pill (Brain / IQ Points)
+========================= */
+.quizzie-token {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #A7F3D0;
+  color: #064E3B;
+
+  padding: 8px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Currency Icon */
+.quizzie-token__icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Currency Value */
+.quizzie-token__value {
+  min-width: 22px;
+  text-align: center;
+}
+
+/* Add / Buy Points Button */
+.quizzie-token__plus {
+  margin-left: 4px;
+
+  background: transparent;
+  border: none;
+
+  color: #064E3B;
+  font-size: 24px;
+  font-weight: 800;
+
+  cursor: pointer;
+  padding: 0;
+}
+
+/* =========================
+   Interaction Polish
+========================= */
+.quizzie-token__plus:hover {
+  transform: scale(1.1);
+}
+
+.quizzie-token__plus:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+   Small Screen Safety
+========================= */
+@media (max-width: 380px) {
+  .quizzie-navbar__avatar-wrap {
+    width: 56px;
+    height: 56px;
+  }
+
+  .quizzie-navbar__name {
+    font-size: 16px;
+  }
+
+  .quizzie-token {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,32 @@
+.no-internet-content {
+  text-align: center;
+  padding: 8px 4px;
+}
+
+/* ICON */
+.no-internet-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #E7FCFA;
+  color: #236A64;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 12px;
+  box-shadow: 0 6px 18px rgba(35,106,100,0.25);
+}
+
+/* TEXT */
+.no-internet-text {
+  font-size: 16px;
+  color: #236A64;
+  margin: 6px 0;
+}
+
+.no-internet-sub {
+  font-size: 13px;
+  color: #6B9E9A;
+}

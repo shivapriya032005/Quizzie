@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro&display=swap');
+
+/* =====================
+   PALETTE VARIABLES (DO NOT CHANGE)
+===================== */
+:root {
+  --bg-main: #F3FEFD;
+  --tile-bg: #E7FCFA;
+  --tile-border: #3C8B85;
+  --tile-locked: #D0F9F6;
+  --accent: #236A64;
+  --accent-dark: #165954;
+  --scrollbar: #89F0E8;
+  --text-muted: #6FCEC7;
+}
+
+/* =====================
+   GLOBAL
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jaro', sans-serif;
+  background: var(--bg-main);
+}
+
+/* =====================
+   ROOT
+===================== */
+.levels-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   HEADER
+===================== */
+.levels-header {
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.levels-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent-dark);
+}
+
+.levels-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* =====================
+   BODY (SCROLL)
+===================== */
+.levels-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 0 120px;
+}
+
+.levels-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.levels-body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border-radius: 20px;
+}
+
+/* =====================
+   GRID
+===================== */
+.levels-grid {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* =====================
+   LEVEL TILE
+===================== */
+.level-tile {
+  position: relative;
+  height: 86px;
+  border-radius: 14px;
+  border: 3px solid var(--tile-border);
+  background: var(--tile-bg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  pointer-events: auto;
+  
+  font-size: 26px;
+  color: var(--accent);
+}
+
+/* Level number */
+.level-number {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 18px;
+  color: var(--accent);
+}
+
+/* =====================
+   LEVEL RANGE (BETWEEN ARROWS)
+===================== */
+.levels-range {
+  padding: 8px 16px;
+  font-size: 16px;
+
+  color: #236A64;
+  background: #E7FCFA;
+
+  border-radius: 14px;
+  border: 2px solid #6FCEC7;
+
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Ensure pagination aligns nicely */
+.levels-pagination-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 420px;
+  margin: 0 auto 20px;
+  padding: 0 16px;
+  gap: 12px;
+}
+
+
+/* =====================
+   COMPLETED
+===================== */
+.level-tile.done {
+  background: #ffffff;
+}
+
+.level-check {
+  width: 38px;
+  height: 38px;
+  background: #22c55e; /* success green stays */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.level-label {
+  position: absolute;
+  bottom: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* =====================
+   PLAY
+===================== */
+.level-tile.play {
+  background: #ffffff;
+}
+
+.level-play {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+/* =====================
+   LOCKED
+===================== */
+.level-tile.locked {
+  background: var(--tile-locked);
+}
+
+.level-lock {
+  color: var(--accent-dark);
+  opacity: 0.8;
+}
+
+/* =====================
+   FOOTER SAFE SPACE
+===================== */
+.levels-footer-space {
+  height: 90px;
+}
+/* =====================
+   HEADER ARROW TITLE
+===================== */
+.levels-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.levels-heading-arrow {
+  padding: 10px 34px 10px 38px;
+  font-size: 22px;
+  color: #F3FEFD;
+  background: #236A64;
+
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 50%,
+    92% 100%,
+    0% 100%,
+    6% 50%
+  );
+
+  border-radius: 16px;
+  letter-spacing: 1px;
+}
+
+/* =====================
+   PAGINATION
+===================== */
+.levels-pagination {
+  position: fixed;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.levels-nav-btn {
+  pointer-events: auto;
+  padding: 12px 28px;
+  font-size: 16px;
+  background: #236A64;
+  color: #F3FEFD;
+  border: none;
+  border-radius: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* Arrow shapes */
+.levels-nav-btn.prev {
+  clip-path: polygon(
+    0% 50%,
+    8% 0%,
+    100% 0%,
+    100% 100%,
+    8% 100%
+  );
+}
+
+.levels-nav-btn.next {
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 50%,
+    92% 100%,
+    0% 100%
+  );
+}
+
+/* =====================
+   PAGINATION (ABOVE GRID)
+===================== */
+.levels-pagination-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 420px;
+  margin: 0 auto 20px;
+  padding: 0 16px;
+}
+
+.levels-nav-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  background: #236A64; /* unchanged */
+  color: #F3FEFD;
+  border: none;
+  border-radius: 16px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+/* Arrow shapes */
+.levels-nav-btn.prev {
+  clip-path: polygon(
+    0% 50%,
+    8% 0%,
+    100% 0%,
+    100% 100%,
+    8% 100%
+  );
+}
+
+.levels-nav-btn.next {
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 50%,
+    92% 100%,
+    0% 100%
+  );
+}
+
+/* Disabled state */
+.levels-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro&display=swap');
+
+/* ======================
+   GLOBAL
+====================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Jaro', sans-serif;
+}
+
+/* ======================
+   ROOT LAYOUT
+====================== */
+.settings-root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #e6fffb, #ccfbf1);
+}
+
+/* ======================
+   HEADER (FULL WIDTH)
+====================== */
+.settings-header {
+  height: 72px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Back Button */
+.header-back {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #bff7f0, #7de3d8);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Arrow Title */
+.header-title {
+  padding: 10px 34px 10px 38px;
+  font-size: 22px;
+  color: #eafffb;
+  background: #2f7f78;
+  clip-path: polygon(
+    0% 0%,
+    92% 0%,
+    100% 50%,
+    92% 100%,
+    0% 100%,
+    6% 50%
+  );
+  border-radius: 16px;
+  letter-spacing: 1px;
+}
+
+/* ======================
+   SCROLLABLE BODY
+====================== */
+.settings-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 0;
+}
+
+/* Custom Scrollbar */
+.settings-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.settings-body::-webkit-scrollbar-thumb {
+  background: rgba(20, 184, 166, 0.6);
+  border-radius: 20px;
+}
+
+.settings-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ======================
+   CONTENT CONTAINER
+====================== */
+.settings-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ======================
+   SECTION
+====================== */
+.settings-section {
+  margin-bottom: 28px;
+}
+
+.settings-section h3 {
+  margin-bottom: 10px;
+  color: #065f46;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* ======================
+   CARD
+====================== */
+.settings-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 8px;
+  box-shadow: 0 12px 26px rgba(6, 95, 70, 0.18);
+}
+
+/* ======================
+   SETTINGS ITEM (ROW)
+====================== */
+.settings-item {
+  width: 100%;
+  background: #f0fdfa;
+  border-radius: 14px;
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+  box-sizing: border-box;
+}
+
+/* spacing between rows */
+.settings-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+/* LEFT SIDE */
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* ICON */
+.item-icon {
+  width: 38px;
+  height: 38px;
+  background: #99f6e4;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* TEXT + ARROW — SAME FONT SIZE EVERYWHERE */
+.settings-item,
+.settings-item span {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  line-height: 1;
+}
+
+/* RIGHT ARROW */
+.item-arrow {
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+/* ======================
+   TOGGLE (FIXED)
+====================== */
+.toggle {
+  width: 42px;
+  height: 22px;
+  background: #cbd5e1;
+  border-radius: 999px;
+  position: relative;
+  border: none;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.toggle span {
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.25s ease;
+}
+
+.toggle.on {
+  background: #10b981;
+}
+
+.toggle.on span {
+  transform: translateX(20px);
+}
+
+/* ======================
+   DANGER ZONE
+====================== */
+.danger-btn {
+  width: 100%;
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: white;
+  border: none;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  margin-bottom: 10px; /* ✅ KEY FIX */
+}
+
+.danger-btn.logout {
+  background: #ef4444;
+}
+
+
+.danger-btn.delete {
+  background: #dc2626; /* darker red */
+}
+
+/* Remove margin for last button */
+.danger-btn:last-child {
+  margin-bottom: 0;
+}
+

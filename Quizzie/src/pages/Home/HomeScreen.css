@@ -1,0 +1,99 @@
+/* =========================
+   Home Screen Wrapper
+========================= */
+:root{
+  overflow: hidden;
+}
+
+.quizzie-home {
+  height: 100vh;
+  width: 100%;
+  background: #EAFDFC;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   Middle Area (Between Nav & Footer)
+========================= */
+.quizzie-home-main {
+  flex: 1;
+  position: relative;
+}
+
+/* =========================
+   Soft Background Curve
+========================= */
+.quizzie-home-curve {
+  position: absolute;
+  bottom: -70%;
+  right: -25%;
+
+  width: 140%;
+  height: 140%;
+
+  background: #DFF7F5;
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   Center Content
+========================= */
+.quizzie-home-center {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 2;
+}
+
+/* =========================
+   Logo
+========================= */
+.quizzie-home-logo {
+  width: 380px;
+  margin-bottom: 35px;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.12));
+}
+
+
+/* =========================
+   Play Button (Arrow)
+========================= */
+.quizzie-play-btn {
+  background: #7FE6D6;
+  color: #064E3B;
+
+  font-weight: 800;
+  font-size: 18px;
+
+  padding: 16px 48px;
+  border: none;
+  cursor: pointer;
+
+  clip-path: polygon(
+    0 0,
+    88% 0,
+    100% 50%,
+    88% 100%,
+    0 100%,
+    8% 50%
+  );
+
+  box-shadow: 0 6px 0 #2DD4BF;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.quizzie-play-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #2DD4BF;
+}

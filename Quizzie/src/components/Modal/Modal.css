@@ -1,0 +1,240 @@
+/* =====================
+   OVERLAY
+===================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 72, 67, 0.55); /* matches your palette */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* =====================
+   MODAL BOX
+===================== */
+.modal-box {
+  background: #E7FCFA;
+  border-radius: 18px;
+  width: 90%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: popIn 0.25s ease;
+}
+
+/* Sizes */
+.modal-sm { max-width: 360px; }
+.modal-md { max-width: 480px; }
+.modal-lg { max-width: 640px; }
+
+/* =====================
+   HEADER
+===================== */
+.modal-header {
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #D0F9F6;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #236A64;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #236A64;
+}
+
+/* =====================
+   BODY
+===================== */
+.modal-body {
+  padding: 16px 18px;
+  overflow-y: auto;
+}
+
+/* Scroll styling */
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+  background: #6FCEC7;
+  border-radius: 10px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.modal-footer {
+  padding: 14px 18px;
+  border-top: 2px solid #D0F9F6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* =====================
+   MODAL CONTENT TEXT
+===================== */
+
+/* Paragraphs */
+.modal-body p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3F6F6A;
+  text-align: center;
+}
+
+/* Emotional / highlighted text */
+.modal-body .emotional {
+  font-size: 16px;
+  font-weight: 500;
+  color: #236A64;
+}
+
+/* Emoji / icon block */
+.modal-body .modal-emoji {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* =====================
+   FOOTER BUTTONS
+===================== */
+
+.modal-footer button {
+  min-width: 110px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Cancel / Neutral */
+.modal-footer .btn-cancel {
+  background: #D0F9F6;
+  color: #236A64;
+}
+
+.modal-footer .btn-cancel:hover {
+  background: #B7F1EC;
+}
+
+/* Primary / Confirm */
+.modal-footer .btn-primary {
+  background: #2FB7AD;
+  color: #FFFFFF;
+}
+
+.modal-footer .btn-primary:hover {
+  background: #28A69C;
+}
+
+/* Danger (Delete Account) */
+.modal-footer .btn-danger {
+  background: #F87171;
+  color: #FFFFFF;
+}
+
+.modal-footer .btn-danger:hover {
+  background: #EF4444;
+}
+
+/* =====================
+   LAYOUT HELPERS
+===================== */
+
+/* Center footer buttons for emotional actions */
+.modal-footer.center {
+  justify-content: center;
+}
+
+/* =====================
+   INPUTS & TEXTAREA
+===================== */
+
+.modal-input,
+.modal-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 2px solid #D0F9F6;
+  background: #F3FFFE;
+  font-size: 14px;
+  color: #236A64;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 12px;
+}
+
+/* Placeholder */
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+  color: #7BBDB7;
+}
+
+/* Focus state */
+.modal-input:focus,
+.modal-textarea:focus {
+  border-color: #2FB7AD;
+  box-shadow: 0 0 0 3px rgba(47, 183, 173, 0.2);
+}
+
+/* Textarea specific */
+.modal-textarea {
+  resize: none;
+  min-height: 90px;
+  line-height: 1.4;
+}
+
+/* Disabled state */
+.modal-input:disabled,
+.modal-textarea:disabled {
+  background: #E6F7F5;
+  color: #9CBEBB;
+  cursor: not-allowed;
+}
+
+
+/* =====================
+   MOBILE FRIENDLY
+===================== */
+
+@media (max-width: 420px) {
+  .modal-footer {
+    flex-direction: column;
+  }
+
+  .modal-footer button {
+    width: 100%;
+  }
+}
+
+
+/* =====================
+   ANIMATION
+===================== */
+@keyframes popIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,203 @@
+.game-root {
+  min-height: 100vh;
+  background: #D0F9F6;
+  padding: 16px;
+  font-family: "Jaro", sans-serif;
+}
+
+/* HEADER */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.game-back-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #A1F3ED;
+  border: none;
+  cursor: pointer;
+}
+
+.game-level-arrow {
+  padding: 10px 30px;
+  background: #2F7A75;
+  color: #ffffff;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  font-size: 18px;
+}
+
+/* PROGRESS */
+.game-progress {
+  text-align: center;
+  margin: 18px 0;
+  color: #236A64;
+}
+
+.game-progress-title {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.game-progress-count {
+  font-size: 30px;
+  margin-top: 4px;
+}
+
+/* CARD */
+.game-card {
+  background: #56ADA6;
+  border-radius: 22px;
+  padding: 28px;
+  margin: 20px auto 0;
+  max-width: 900px;
+}
+
+/* QUESTION STRIP */
+.game-question-strip {
+  height: 64px;
+  background: #094843;
+  margin-bottom: 26px;
+
+  clip-path: polygon(
+    4% 0%,
+    96% 0%,
+    100% 50%,
+    96% 100%,
+    4% 100%,
+    0% 50%
+  );
+
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.15);
+}
+
+
+/* OPTIONS */
+.game-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.game-option {
+  height: 52px;
+  border-radius: 14px;
+  background: #E7FCFA;
+  border: 2px solid #236A64;
+
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.game-option:hover {
+  background: #F3FEFD;
+  transform: translateY(-2px);
+}
+
+.game-option:active {
+  transform: scale(0.97);
+}
+
+
+/* HINTS */
+.game-hints {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 26px;
+}
+
+.hint-wrapper {
+  position: relative;
+}
+
+.hint-box {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 16px;
+  background: #E7FCFA;
+  border: 2px solid #236A64;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.15s ease;
+}
+
+.hint-box:hover {
+  transform: translateY(-2px);
+}
+
+.hint-count {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+
+  width: 22px;
+  height: 22px;
+
+  background: #094843;
+  color: #ffffff;
+
+  border-radius: 50%;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PROGRESS ROW */
+.game-progress-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+/* TIMER */
+.game-timer {
+  min-width: 54px;
+  height: 36px;
+
+  background: #236A64;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* LOW TIME WARNING */
+.game-timer.danger {
+  background: #ef4444;
+  animation: pulse 0.8s infinite;
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+

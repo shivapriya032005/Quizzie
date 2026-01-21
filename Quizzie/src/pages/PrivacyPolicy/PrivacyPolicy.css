@@ -1,0 +1,42 @@
+.privacy-root {
+  min-height: 100vh;
+  background: #E7FCFA;
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #D0F9F6;
+  color: #236A64;
+}
+
+.privacy-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.privacy-content {
+  padding: 16px;
+  color: #236A64;
+}
+
+.privacy-content h3 {
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.privacy-content p,
+.privacy-content li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.privacy-content ul {
+  padding-left: 20px;
+}

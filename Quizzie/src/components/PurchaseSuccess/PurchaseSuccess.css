@@ -1,0 +1,52 @@
+.purchase-success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 6px;
+}
+
+/* ICON */
+.purchase-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #B8F6F1;
+  color: #236A64;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(35, 106, 100, 0.25);
+  margin-bottom: 12px;
+}
+
+/* TITLE */
+.purchase-title {
+  font-size: 22px;
+  color: #236A64;
+  margin: 6px 0;
+}
+
+/* MESSAGE */
+.purchase-message {
+  font-size: 15px;
+  color: #3C8B85;
+  line-height: 1.4;
+}
+
+/* BUTTON */
+.purchase-btn {
+  background: #2F7A75;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.purchase-btn:hover {
+  background: #236A64;
+}

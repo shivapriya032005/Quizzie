@@ -1,0 +1,46 @@
+.about-root {
+  min-height: 100vh;
+  background: #E7FCFA;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #D0F9F6;
+  color: #236A64;
+}
+
+.about-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.about-content {
+  padding: 16px;
+  color: #236A64;
+}
+
+.about-section {
+  margin-bottom: 18px;
+}
+
+.about-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.about-content p,
+.about-content li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.about-content ul {
+  padding-left: 20px;
+}

@@ -1,0 +1,66 @@
+.confirm-content {
+  text-align: center;
+  padding: 8px 4px;
+}
+
+/* ICON */
+.confirm-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #D0F9F6;
+  color: #236A64;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 12px;
+  box-shadow: 0 6px 16px rgba(35,106,100,0.25);
+}
+
+/* TEXT */
+.confirm-text {
+  font-size: 14px;
+  color: #3C8B85;
+  margin: 6px 0;
+}
+
+/* ITEM NAME */
+.confirm-item {
+  font-size: 18px;
+  color: #236A64;
+  margin: 6px 0;
+}
+
+/* NOTE */
+.confirm-note {
+  font-size: 13px;
+  color: #6B9E9A;
+  margin-top: 8px;
+}
+
+/* FOOTER BUTTONS */
+.confirm-cancel-btn {
+  background: #E7FCFA;
+  border: 2px solid #6FCEC7;
+  color: #236A64;
+
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.confirm-buy-btn {
+  background: #2F7A75;
+  color: white;
+
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.confirm-buy-btn:hover {
+  background: #236A64;
+}
